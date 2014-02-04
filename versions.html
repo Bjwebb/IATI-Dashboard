@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+  <title>
+IATI Dashboard - Validation
+</title>
+  <style>
+    .big-number {
+      font-size: 100px;
+    }
+    .title-number {
+      font-weight: bold;
+      float: left;
+      width: 20%;
+    }
+    .title-text {
+      float: left;
+    }
+    .panel-heading {
+        clear: both;
+    }
+    .break {
+        word-break:break-all;
+    }
+.tablesorter-default .tablesorter-header {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	background-position: center left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	border-bottom: #000 2px solid;
+}
+.tablesorter-header-inner {
+  margin-left:10px;
+}
+html,body{height:100%;}
+#wrap{min-height:100%;height:auto;margin:0 auto -60px;padding:0 0 60px;}
+#footer{height:80px;background-color:#f5f5f5;}
+.container .text-muted{margin: 20px 0 0 0;}
+  </style>
+  
+</head>
+<body>
+<div id="wrap">
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">IATI Dashboard</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      <li ><a href="index.html">Headlines</a></li>
+      <li class="active"><a href="download.html">Data Quality</a></li>
+      <li ><a href="elements.html">Exploring Data</a></li>
+      <li ><a href="github.html">Github</a></li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+      
+      
+      <li><a href="download.html">Download Errors</a></li>
+      <li><a href="xml.html">XML Errors</a></li>
+      <li><a href="validation.html">Validation</a></li>
+      <li class="active"><a href="versions.html">Versions</a></li>
+      <li><a href="licenses.html">Licenses</a></li>
+      <li><a href="organisation.html">Organisation XML</a></li>
+      
+      
+      
+      </ul>
+    </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <div class="page-header">
+      <h1>Versions</h1>
+      <p class="lead"></p>
+    </div>
+
+    <div class="row">
+      
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="title-number"></span>
+              <span class="title-text">Versions per file (expected)</span>
+              <br clear="all"/>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <img src="versions_expected.png" width="100%" />
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="title-number"></span>
+              <span class="title-text">Versions per file (other)</span>
+              <br clear="all"/>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <img src="versions_other.png" width="100%" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="title-number"></span>
+              <span class="title-text">Versions legend (expected)</span>
+              <br clear="all"/>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <img src="versions_expected_legend.png" width="100%" />
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="title-number"></span>
+              <span class="title-text">Versions legend (other)</span>
+              <br clear="all"/>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <img src="versions_other_legend.png" width="100%" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="title-number"></span>
+              <span class="title-text">Publishers per version (expected)</span>
+              <br clear="all"/>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <img src="publishers_per_version_expected.png" width="100%" />
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="title-number"></span>
+              <span class="title-text">Publishers per version (other)</span>
+              <br clear="all"/>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <img src="publishers_per_version_other.png" width="100%" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Publishers by version</h2>
+
+    <p>(<a href="http://localhost:8001/current/inverted-publisher/versions.json">In JSON format</a>)</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Expected versions</h3>
+          </div>
+          <div class="panel-body">
+          <div class="row">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="col-md-4">
+              <code>1.01</code>
+              <table class="table table-striped">
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/aa">aa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ausaid">ausaid</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/bmz">bmz</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cif">cif</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ciks">ciks</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ec-echo">ec-echo</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ewb_canada">ewb_canada</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/fa">fa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/foundation_center">foundation_center</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/gain">gain</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/globalintegrity">globalintegrity</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/goal">goal</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/indtrust">indtrust</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/irishaid">irishaid</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/mamta_himc">mamta_himc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pdorg">pdorg</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/psi">psi</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/scuk">scuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/spuk">spuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/stichting_hivos">stichting_hivos</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/transparency-international">transparency-international</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/troc">troc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/unops">unops</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/worldbank">worldbank</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/wwfpakistan">wwfpakistan</a></td>
+                </tr>
+                
+              </table>
+            </div>
+            
+            
+            
+            
+            <div class="col-md-4">
+              <code>1.02</code>
+              <table class="table table-striped">
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/aai">aai</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/aauk">aauk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/acaa">acaa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/adrauk">adrauk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/afdb">afdb</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ai_1064413">ai_1064413</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/akfuk73">akfuk73</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/akvo">akvo</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/amrefuk">amrefuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/arfh">arfh</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/art19">art19</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/basicneeds">basicneeds</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/blueventures">blueventures</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/bracintl">bracintl</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/buildafrica">buildafrica</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/canoncollinstrust">canoncollinstrust</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cda">cda</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cecily">cecily</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/childhopeuk">childhopeuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cic">cic</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ciks">ciks</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/concernuk">concernuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ctc">ctc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cuammtrustees">cuammtrustees</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/dapp">dapp</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/dc">dc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/deccadmin">deccadmin</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/dfid">dfid</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/diltuk">diltuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/doh">doh</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/dthfxx12">dthfxx12</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/dwp">dwp</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ec-echo">ec-echo</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ec-fpi">ec-fpi</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/eti">eti</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/eu">eu</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ff">ff</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/fm">fm</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/fyf">fyf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/gb-cc-220949">gb-cc-220949</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/gl">gl</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/helpage_international">helpage_international</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hhc">hhc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hi">hi</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hifed">hifed</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hp_12">hp_12</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hpa">hpa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hsa">hsa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/htspe">htspe</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/iadb">iadb</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ippf">ippf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/lcd_admin">lcd_admin</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/lcds">lcds</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/maec">maec</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/malariaconsortium">malariaconsortium</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/mcs">mcs</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/mfat">mfat</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/mic-uk">mic-uk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/mlf">mlf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/mrc-sierra-leone">mrc-sierra-leone</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/msi">msi</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/nfn">nfn</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/oxfamgb">oxfamgb</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/oxfamindia">oxfamindia</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pact">pact</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/peopleinaid">peopleinaid</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/plan_usa">plan_usa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pontis">pontis</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pragya">pragya</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/progressio">progressio</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/rc">rc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/rem">rem</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/rfuk">rfuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/sacu">sacu</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/sciaf">sciaf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/sendacow">sendacow</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/sida">sida</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/taf">taf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/tlmew">tlmew</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/traidcraft">traidcraft</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/troc">troc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/undp">undp</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/unicef">unicef</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/unw">unw</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/vfan">vfan</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/wacc-uk">wacc-uk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/wfp">wfp</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/womankindworld">womankindworld</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/worldbank">worldbank</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/wsup">wsup</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/wvuk">wvuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/wwfpakistan">wwfpakistan</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ycare">ycare</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/yipl">yipl</a></td>
+                </tr>
+                
+              </table>
+            </div>
+            
+            
+            
+            
+            <div class="col-md-4">
+              <code>1.03</code>
+              <table class="table table-striped">
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ablechildafrica">ablechildafrica</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/acord">acord</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/addinternational">addinternational</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/aet">aet</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/afghanaid">afghanaid</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/amrefuk">amrefuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/apt">apt</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/art19">art19</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/asi">asi</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/blueventures">blueventures</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/bond">bond</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/britishcouncil">britishcouncil</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/caid">caid</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cal">cal</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ciuk">ciuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/coffey">coffey</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/concernuk">concernuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cord">cord</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cordaid">cordaid</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cprojects">cprojects</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cr">cr</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ctc">ctc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/dai-e">dai-e</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/dc">dc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/deccadmin">deccadmin</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/dfatd-maecd">dfatd-maecd</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/dipr">dipr</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/dochas">dochas</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/drf">drf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/eiuk">eiuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/evc">evc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/fa">fa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ffi_publisher">ffi_publisher</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/fge">fge</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/finland_mfa">finland_mfa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/france">france</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/fyf">fyf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/gavi">gavi</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/globalgiving">globalgiving</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/grm">grm</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hewlett-foundation">hewlett-foundation</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hfhgb">hfhgb</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hhc">hhc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hi">hi</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hooda">hooda</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/htspe">htspe</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/hwa-zm">hwa-zm</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/integrity_action">integrity_action</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/international-alert">international-alert</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/irw">irw</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/iww_publish">iww_publish</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ke-ngc-3372">ke-ngc-3372</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/lcd_admin">lcd_admin</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/maec">maec</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/malariaconsortium">malariaconsortium</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/motivation">motivation</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/mrc">mrc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/mrdf">mrdf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/network4africa">network4africa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/nrc">nrc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pa">pa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pact">pact</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pontis">pontis</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/power">power</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pragya">pragya</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pri">pri</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pwyf">pwyf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/restless">restless</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/rfuk">rfuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ri-uk">ri-uk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/rspb_">rspb_</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/sacbc">sacbc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/sciaf">sciaf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/sdc_ch">sdc_ch</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/sense_international">sense_international</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/sida">sida</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/sossaheluk">sossaheluk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ss-org">ss-org</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/street_child">street_child</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/surf">surf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/targettb">targettb</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/tearfund">tearfund</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/theglobalfund">theglobalfund</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/tlmew">tlmew</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/tripleline_crownagents">tripleline_crownagents</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/twin-iati">twin-iati</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/undp">undp</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/unfpa">unfpa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/unhabitat">unhabitat</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/vfan">vfan</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/vso">vso</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/waronwant">waronwant</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/wateraid">wateraid</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/wfwiuk">wfwiuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/wvuk">wvuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/zet">zet</a></td>
+                </tr>
+                
+              </table>
+            </div>
+            
+            
+            
+            
+            
+            
+            <div class="col-md-4">
+              <code>null</code>
+              <table class="table table-striped">
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/afrikids">afrikids</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/bmz">bmz</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/camfed">camfed</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cic">cic</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/foe_ewni">foe_ewni</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/iadb">iadb</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/icauk">icauk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/icn">icn</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/jeevika_trust">jeevika_trust</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/karuna">karuna</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/lead_international">lead_international</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/livingearth12">livingearth12</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/maec">maec</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/mapaction">mapaction</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/opportunity-international-uk">opportunity-international-uk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pact">pact</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/plan_uk">plan_uk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pont">pont</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/tao-03473165">tao-03473165</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/tbalert">tbalert</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/tearfund">tearfund</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/theict">theict</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ycare">ycare</a></td>
+                </tr>
+                
+              </table>
+            </div>
+            
+            
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Other versions</h3>
+          </div>
+          <div class="panel-body">
+          <div class="row">
+            
+            
+            
+            <div class="col-md-4">
+              <code>&amp;nbsp;1.0</code>
+              <table class="table table-striped">
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/asdb">asdb</a></td>
+                </tr>
+                
+              </table>
+            </div>
+            
+            
+            
+            
+            <div class="col-md-4">
+              <code>1</code>
+              <table class="table table-striped">
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/aa">aa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/maec">maec</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/scuk">scuk</a></td>
+                </tr>
+                
+              </table>
+            </div>
+            
+            
+            
+            
+            <div class="col-md-4">
+              <code>1.0</code>
+              <table class="table table-striped">
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/caid">caid</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cdc">cdc</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ciuk">ciuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cu">cu</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/danida">danida</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ec-elarg">ec-elarg</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ec-fpi">ec-fpi</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/eu">eu</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/fco">fco</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/manxtimes">manxtimes</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/pa">pa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/plan_uk">plan_uk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/saferworld">saferworld</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ss-org">ss-org</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/uncdf">uncdf</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/unitedstates">unitedstates</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/wwf-uk">wwf-uk</a></td>
+                </tr>
+                
+              </table>
+            </div>
+            
+            
+            
+            
+            <div class="col-md-4">
+              <code>1.00</code>
+              <table class="table table-striped">
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/cafod">cafod</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/finland_mfa">finland_mfa</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/minbuza_nl">minbuza_nl</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/ocha_fts">ocha_fts</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/scuk">scuk</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/spark">spark</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/transparency-international">transparency-international</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/unitedstates">unitedstates</a></td>
+                </tr>
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/unops">unops</a></td>
+                </tr>
+                
+              </table>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="col-md-4">
+              <code>[1.00]</code>
+              <table class="table table-striped">
+                
+                <tr>
+                  <td><a href="http://iatiregistry.org/publisher/self-help-africa">self-help-africa</a></td>
+                </tr>
+                
+              </table>
+            </div>
+            
+            
+            
+            
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+
+</div>
+
+<div id="footer"><div class="container"><p class="text-muted"><a href="https://github.com/Bjwebb/IATI-Dashboard/">Source Code</a>. Generated on 2014-02-04 18:20:25 +0000 from data downloaded 2014-02-04 02:34:23 +0000. (NB This is the time the download completed. Changes in the previous few hours may not be present).</p></div></div>
+
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+<script>$(function() { $("table.table").tablesorter(); });</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-47211623-1', 'bjwebb.github.io');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+[
+  [
+    "8", 
+    "dfid", 
+    "dfid-null", 
+    "http://iati.dfid.gov.uk/iati/NonIATI/NULL"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-cd", 
+    "http://foreignassistance.gov/IATI/Activities/Congo, Democratic Republic of/Congo, Democratic Republic of.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-ci", 
+    "http://foreignassistance.gov/IATI/Activities/Cote d'Ivoire/Cote d'Ivoire.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_administrative_costs", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Administrative Costs/USAID Administrative Costs.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_africa_regional", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Africa Regional/USAID Africa Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_asia_middle_east_regional", 
+    "http://foreignassistance.gov/IATI/Activities/Asia Middle East Regional/Asia Middle East Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_bureau_for_management", 
+    "http://foreignassistance.gov/IATI/Activities/Bureau for Management (USAID)/Bureau for Management (USAID).xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_bureau_for_policy_planning_and_learning", 
+    "http://foreignassistance.gov/IATI/Activities/Bureau for Policy, Planning and Learning (USAID)/Bureau for Policy, Planning and Learning (USAID).xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_caribbean_regional", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Caribbean Regional/USAID Caribbean Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_central_africa_regional", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Central Africa Regional/USAID Central Africa Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_central_america_regional", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Central America Regional/USAID Central America Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_central_asia_regional", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Central Asia Regional/USAID Central Asia Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_democracy_conflict_and_humanitarian_assistance", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Democracy, Conflict and Humanitarian Assistance/USAID Democracy, Conflict and Humanitarian Assistance.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_east_africa_regional", 
+    "http://foreignassistance.gov/IATI/Activities/USAID East Africa Regional/USAID East Africa Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_economic_growth_education_and_environment", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Economic Growth, Education and Environment/USAID Economic Growth, Education and Environment.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_food_security", 
+    "http://foreignassistance.gov/IATI/Activities/Food Security (USAID)/Food Security (USAID).xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_global_health", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Global Health/USAID Global Health.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_joint_eurasia_regional", 
+    "http://foreignassistance.gov/IATI/Activities/Joint Eurasia Regional/Joint Eurasia Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_latin_america_and_caribbean_regional", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Latin America and Caribbean Regional/USAID Latin America and Caribbean Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_legislative_and_public_affairs", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Legislative and Public Affairs (LPA)/USAID Legislative and Public Affairs (LPA).xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_middle_east_regional", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Middle East Regional/USAID Middle East Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_office_of_development_partners", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Office of Development Partners/USAID Office of Development Partners.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_office_of_innovation_and_development_alliances", 
+    "http://foreignassistance.gov/IATI/Activities/Office of Innovation and Development Alliances (USAID)/Office of Innovation and Development Alliances (USAID).xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_operating_expense", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Operating Expense/USAID Operating Expense.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_pacific", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Pacific/USAID Pacific.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_regional_development_mission_asia", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Regional Development Mission-Asia/USAID Regional Development Mission-Asia.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_south_america_regional", 
+    "http://foreignassistance.gov/IATI/Activities/USAID South America Regional/USAID South America Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_southern_africa_regional", 
+    "http://foreignassistance.gov/IATI/Activities/USAID Southern Africa Regional/USAID Southern Africa Regional.xml"
+  ], 
+  [
+    "8", 
+    "unitedstates", 
+    "unitedstates-usaid_west_africa_regional", 
+    "http://foreignassistance.gov/IATI/Activities/USAID West Africa Regional/USAID West Africa Regional.xml"
+  ], 
+  [
+    "8", 
+    "unops", 
+    "unops-kp", 
+    "http://www.unops.org/iati/iati-activities/iati_activity_KP.xml"
+  ], 
+  [
+    "8", 
+    "unops", 
+    "unops-nu", 
+    "http://www.unops.org/iati/iati-activities/iati_activity_NU.xml"
+  ]
+]
