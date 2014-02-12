@@ -1,18 +1,6 @@
 [
   [
     "8", 
-    "eu", 
-    "eu-in", 
-    "http://ec.europa.eu/europeaid/files/iati/EU_IN.xml"
-  ], 
-  [
-    "4", 
-    "unicef", 
-    "unicef-activity", 
-    "http://www.unicef.org/transparency/files/Activity_file.xml"
-  ], 
-  [
-    "8", 
     "unitedstates", 
     "unitedstates-usaid_administrative_costs", 
     "http://foreignassistance.gov/IATI/Activities/USAID Administrative Costs/USAID Administrative Costs.xml"
