@@ -1,6 +1,36 @@
 [
   [
     "8", 
+    "cif", 
+    "cif-889", 
+    "http://siteresources.worldbank.org/IATI/CIF/CIF-889.xml"
+  ], 
+  [
+    "8", 
+    "finland_mfa", 
+    "finland_mfa-000", 
+    "http://formin.finland.fi/opendata/IATI/2012/MFA_org_file.xml"
+  ], 
+  [
+    "8", 
+    "irc_uk", 
+    "irc_uk-df080", 
+    "http://109.123.121.248/csviati/static/2014-02-12/1392217832.38.xml "
+  ], 
+  [
+    "4", 
+    "transparency-international", 
+    "transparency-international-10000000", 
+    "http://media.transparency.org/iati/IATI_TIS_Project_10000000.xml"
+  ], 
+  [
+    "4", 
+    "transparency-international", 
+    "transparency-international-10000287", 
+    "http://media.transparency.org/iati/IATI_TIS_Project_10000287.xml"
+  ], 
+  [
+    "8", 
     "unitedstates", 
     "unitedstates-usaid_administrative_costs", 
     "http://foreignassistance.gov/IATI/Activities/USAID Administrative Costs/USAID Administrative Costs.xml"
