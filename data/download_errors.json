@@ -1,27 +1,15 @@
 [
   [
     "8", 
-    "finland_mfa", 
-    "finland_mfa-000", 
-    "http://formin.finland.fi/opendata/IATI/2012/MFA_org_file.xml"
+    "cif", 
+    "cif-889", 
+    "http://siteresources.worldbank.org/IATI/CIF/CIF-889.xml"
   ], 
   [
     "8", 
     "irc_uk", 
     "irc_uk-df080", 
     "http://109.123.121.248/csviati/static/2014-02-12/1392217832.38.xml "
-  ], 
-  [
-    "8", 
-    "unfpa", 
-    "unfpa-act", 
-    "https://data.unfpa.org/Apps/IATI/release/UNFPA_activities.xml"
-  ], 
-  [
-    "8", 
-    "unfpa", 
-    "unfpa-org", 
-    "https://data.unfpa.org/Apps/IATI/release/UNFPA_organisation.xml"
   ], 
   [
     "8", 
